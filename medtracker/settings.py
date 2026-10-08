@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2p^u1(k@!9j10j6=iapa)dws^m-a5m!-te&z6)6*wqliprzdhk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["medicine-reminder-tracker-icba.onrender.com"]
 
 
 # Application definition
