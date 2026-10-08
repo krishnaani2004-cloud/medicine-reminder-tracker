@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #444;
+            padding: 10px;
+        }
+        a.button {
+            background: #4CAF50;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.logout {
+            background: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome, {{ user.username }} 👋</h2>
+
+    <h3>Your Medicines</h3>
+
+    <a href="{% url 'add_medicine' %}" class="button">+ Add Medicine</a>
+    <a href="{% url 'home' %}" class="button logout">Logout</a>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Dosage</th>
+            <th>Time</th>
+        </tr>
+
+        {% for m in medicines %}
+        <tr>
+            <td>{{ m.name }}</td>
+            <td>{{ m.dosage }}</td>
+            <td>{{ m.time }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No medicines added yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caretaker Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1e1e1e;
+            color: white;
+        }
+
+        .header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            border-bottom: 2px solid #444;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            background: #2c2c2c;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .option {
+            padding: 15px;
+            margin: 15px 0;
+            background: #444;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #00aaff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.button:hover {
+            background: #0088cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        Welcome, {{ user.username }}
+    </div>
+
+    <div class="container">
+
+        <div class="option">
+            ✔ View assigned patients  
+        </div>
+
+        <div class="option">
+            ✔ Add medicine reminders  
+        </div>
+
+        <div class="option">
+            ✔ View patient medicine schedules  
+        </div>
+
+        <div class="option">
+            ✔ Update or delete medicine reminders  
+        </div>
+
+        <a href="/" class="button">Logout</a>
+
+    </div>
+
+</body>
+</html>

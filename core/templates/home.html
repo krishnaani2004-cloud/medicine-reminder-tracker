@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDTRACK - Login</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+             margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background: url("{% static ' ' %}") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .login-box {
+            position: relative;
+            z-index: 10;
+            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+        }
+        header {
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  
+
+        h1 {
+            font-size: 50px;
+            font-weight: 800;
+            text-align: center;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .btn-patient {
+            background-color: #0dcaf0;
+            border: none;
+        }
+
+        .btn-caretaker {
+            background-color: #20c997;
+            border: none;
+        }
+
+        .btn-patient:hover, .btn-caretaker:hover {
+            opacity: 0.85;
+        }
+
+        .footer-text {
+            color: rgb(210,210,210);
+            font-size: 14px;
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>MedTrack</h1>
+    <nav>
+      <a href="#" style="color:white;">Home</a> |
+      <a href="#" style="color:white;">About</a>
+    </nav>
+  </header>
+
+  <p></p>
+
+  <footer>
+    © 2025 My Website — All rights reserved.
+  </footer>
+
+<div class="overlay"></div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+
+            <div class="login-box text-center">
+                <h1>MEDTRACK</h1>
+
+                <a href="/patient_login" class="btn btn-custom btn-patient">Patient Login</a>
+
+                <a href="/caretaker_login" class="btn btn-custom btn-caretaker">Caretaker Login</a>
+                <a href="/register_choice" class="btn">Register here!</a><br>
+
+                <a href="/admin_login" class="btn admin-btn">ADMIN LOGIN</a>
+
+                <p class="footer-text">Medicine Reminder & Tracking System for Elderly Patients</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .admin-btn {
+        background-color: #222;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+</style>
+</body>
+</html>
